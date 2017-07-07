@@ -1,0 +1,23 @@
+<h1>Let's Make a.....   ...Meetup!</h1>
+
+  <% @errors.each do |message|%>
+    <ul>
+      <li><%= message %></li>
+    </ul>
+  <% end %>
+
+<form class="form" action="/meetups/new" method="post">
+  <label for="name">Name:
+    <input class="<%= 'error' if @params[:name] === '' %>" type="text" name="name" id='name' value="<%= @params[:name] %>" />
+  </label>
+
+  <label for="location">Location:
+    <input class="<%= 'error' if @params[:location] === '' %>" type="text" name="location" id='location' value="<%= @params[:location] %>" />
+  </label>
+
+  <label for="description">Description:
+    <input class="<%= 'error' if @params[:description] === '' %>" type="text" name="description" id='description' value="<%= @params[:description] %>" />
+  </label>
+
+  <input type='submit' value='Create Meetup!' />
+</form>

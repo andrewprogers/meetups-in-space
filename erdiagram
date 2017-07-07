@@ -1,0 +1,8 @@
+http://www.nomnoml.com/
+
+[Meetup|id|name|description|location|user_id|timestamps]
+[User|id|username|avatar_url|provider|uid|email|timestamps]
+[RSVP|id|user_id|meetup_id|timestamps]
+[User]->[Meetup]
+[User]->[RSVP]
+[Meetup]->[RSVP]
